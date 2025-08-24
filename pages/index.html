@@ -283,9 +283,10 @@
       updateInput(); // 初始化顯示 $0
     });
     const amountInput = document.getElementById('amount');
+
     amountInput.addEventListener('mousedown', (e) => {
-      e.preventDefault();    // 阻止瀏覽器 focus -> 不彈出鍵盤
-      expandCalculator();    // 展開計算機
+      e.preventDefault();      // 阻止鍵盤彈出
+      expandCalculator();      // 展開計算機
     });
   </script>
 
