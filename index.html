@@ -64,16 +64,9 @@
                   </li>
                   <li class="col-6">
 
-                    <input type="text" id="amount" class="form-control" inputmode="none" placeholder="$0">
+                    <input type="text" id="amount" class="form-control" inputmode="none" placeholder="$0" readonly>
                   </li>
-                  <li class="col-6">
 
-                    <input type="text" id="amount" class="form-control" inputmode="none" placeholder="$0">
-                  </li>
-                  <li class="col-6">
-
-                    <input type="text" id="amount" class="form-control" inputmode="none" placeholder="$0">
-                  </li>
                 </ul>
               </section>
 
@@ -288,6 +281,11 @@
       window.saveFunction = () => alert('儲存');
 
       updateInput(); // 初始化顯示 $0
+    });
+    const amountInput = document.getElementById('amount');
+    amountInput.addEventListener('mousedown', (e) => {
+      e.preventDefault();    // 阻止瀏覽器 focus -> 不彈出鍵盤
+      expandCalculator();    // 展開計算機
     });
   </script>
 
