@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <title>index</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-  <title>index</title>
-</head>
-
-<body>
-
-
-  <div class="container-fluid mobile-frame bg-white vh-100">
-    <%- include('./layout/header'); -%>
+  <body>
+    <div class="container-fluid mobile-frame bg-white vh-100">
+      <%- include('./layout/header'); -%>
       <main>
         <div class="py-4 d-flex justify-content-between align-items-center">
           <i data-lucide="chevron-left" class="icon-24"></i>
@@ -21,90 +21,154 @@
           <i data-lucide="chevron-right" class="icon-24 icon-transparent"></i>
         </div>
         <div class="position-relative">
-          <input type="text" id="consult_datetime" class="form-control py-4 px-5" readonly />
-          <span id="calendar_icon" class="position-absolute top-50 end-0 translate-middle-y me-5"
-            style="cursor:pointer;">
+          <input
+            type="text"
+            id="consult_datetime"
+            class="form-control py-4 px-5"
+            readonly
+          />
+          <span
+            id="calendar_icon"
+            class="position-absolute top-50 end-0 translate-middle-y me-5"
+            style="cursor: pointer"
+          >
             <i data-lucide="calendar"></i>
           </span>
         </div>
 
-
         <!--支出/收入/轉帳-->
         <div class="addrecord">
-          <ul class="nav nav-underline border-bottom text-center" id="account-tab" role="tablist">
+          <ul
+            class="nav nav-underline border-bottom text-center"
+            id="account-tab"
+            role="tablist"
+          >
             <li class="nav-item tab-three">
-              <a class="nav-link active" id="expenseAmount-tab" data-bs-toggle="tab" href="#expenseAmount" role="tab"
-                aria-controls="expenseAmount" aria-selected="true">支出</a>
+              <a
+                class="nav-link active"
+                id="expenseAmount-tab"
+                data-bs-toggle="tab"
+                href="#expenseAmount"
+                role="tab"
+                aria-controls="expenseAmount"
+                aria-selected="true"
+                >支出</a
+              >
             </li>
             <li class="nav-item tab-three">
-              <a class="nav-link" id="passengers-tab" data-bs-toggle="tab" href="#passengers" role="tab"
-                aria-controls="passengers" aria-selected="false">收入</a>
+              <a
+                class="nav-link"
+                id="passengers-tab"
+                data-bs-toggle="tab"
+                href="#passengers"
+                role="tab"
+                aria-controls="passengers"
+                aria-selected="false"
+                >收入</a
+              >
             </li>
             <li class="nav-item tab-three">
-              <a class="nav-link" id="passengers-tab" data-bs-toggle="tab" href="#passengers" role="tab"
-                aria-controls="passengers" aria-selected="false">轉帳</a>
+              <a
+                class="nav-link"
+                id="passengers-tab"
+                data-bs-toggle="tab"
+                href="#passengers"
+                role="tab"
+                aria-controls="passengers"
+                aria-selected="false"
+                >轉帳</a
+              >
             </li>
           </ul>
 
           <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="expenseAmount" role="tabpanel"
-              aria-labelledby="expenseAmount-tab" tabindex="0">
+            <div
+              class="tab-pane fade show active"
+              id="expenseAmount"
+              role="tabpanel"
+              aria-labelledby="expenseAmount-tab"
+              tabindex="0"
+            >
               <section class="py-5 d-flex align-items-center flex-column">
-                <div class="rounded-circle category-icon mb-4"
-                  style="background-color: #FFF8EC; width: 100px; height: 100px;">
-                  <img src="/assets/images/Category/icon-category-food-breakfast-48.svg" alt="早餐icon" class="">
+                <div
+                  class="rounded-circle category-icon mb-4"
+                  style="background-color: #fff8ec; width: 100px; height: 100px"
+                >
+                  <img
+                    src="/assets/images/Category/icon-category-food-breakfast-48.svg"
+                    alt="早餐icon"
+                    class=""
+                  />
                 </div>
                 <p>早餐 <i data-lucide="pencil" class="icon-15 ms-2"></i></p>
               </section>
+              <!--input-->
               <section>
                 <ul class="row custom-gap gy-4">
                   <li class="col-6">
-                    <input type="text" id="name" class="form-control" inputmode="none" placeholder="名稱">
+                    <input
+                      type="text"
+                      id="name"
+                      class="form-control"
+                      placeholder="名稱"
+                    />
                   </li>
                   <li class="col-6">
-
-                    <input type="text" id="amount" class="form-control" inputmode="none" placeholder="$0" readonly>
+                    <input
+                      type="text"
+                      id="amount"
+                      class="form-control"
+                      inputmode="none"
+                      placeholder="$0"
+                      readonly
+                    />
                   </li>
-
                 </ul>
               </section>
-
             </div>
 
-            <!--常客-->
-            <div class="tab-pane fade frequent-traveler" id="expenseAmount" role="tabpanel"
-              aria-labelledby="expenseAmount-tab" tabindex="0">
-
-
-
-
-
-
-            </div>
+            <!--收入-->
+            <div
+              class="tab-pane fade frequent-traveler"
+              id="expenseAmount"
+              role="tabpanel"
+              aria-labelledby="expenseAmount-tab"
+              tabindex="0"
+            ></div>
           </div>
         </div>
 
-
-
+        <!--底部彈開按鈕+計算機-->
         <!-- Offcanvas -->
         <div class="offcanvas-bottom mobile-frame" id="calculator">
           <!-- 部分展開 -->
           <div class="partial-view" id="partialView">
             <div class="expand-handle"></div>
             <div class="d-flex gap-4 align-items-center">
-              <button type="button"
+              <button
+                type="button"
                 class="btn btn-outline-primary rounded-pill flex-grow-1 d-flex align-items-center justify-content-center"
-                onclick="event.stopPropagation(); voiceFunction()" style="height: 44px;">
+                onclick="event.stopPropagation(); voiceFunction()"
+                style="height: 44px"
+              >
                 <i data-lucide="mic"></i>
               </button>
-              <button type="button"
+              <button
+                type="button"
                 class="btn btn-outline-primary rounded-pill flex-grow-1 d-flex align-items-center justify-content-center"
-                onclick="event.stopPropagation(); qrFunction()" style="height: 44px;">
+                onclick="event.stopPropagation(); qrFunction()"
+                style="height: 44px"
+              >
                 <i data-lucide="qr-code" class="align-middle"></i>
               </button>
-              <button type="button"
+              <button
+                type="button"
                 class="btn btn-primary rounded-pill d-flex align-items-center justify-content-center"
-                style="width: 165.5px; height: 44px;" onclick="event.stopPropagation(); saveFunction()">儲存</button>
+                style="width: 165.5px; height: 44px"
+                onclick="event.stopPropagation(); saveFunction()"
+              >
+                儲存
+              </button>
             </div>
             <%- include('./layout/footer'); -%>
           </div>
@@ -112,184 +176,273 @@
           <!-- 完全展開 -->
           <div class="calculator-full" id="calculatorFull">
             <div class="calculator-header gap-4 mb-4">
-              <button type="button" class="btn btn-outline-primary rounded-pill">語音記帳</button>
-              <button type="button" class="btn btn-outline-primary rounded-pill">發票記帳</button>
+              <button
+                type="button"
+                class="btn btn-outline-primary rounded-pill"
+              >
+                語音記帳
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-primary rounded-pill"
+              >
+                發票記帳
+              </button>
             </div>
 
             <div class="calculator-grid">
-              <button class="calc-btn number" onclick="inputNumber('7')">7</button>
-              <button class="calc-btn number" onclick="inputNumber('8')">8</button>
-              <button class="calc-btn number" onclick="inputNumber('9')">9</button>
+              <button class="calc-btn number" onclick="inputNumber('7')">
+                7
+              </button>
+              <button class="calc-btn number" onclick="inputNumber('8')">
+                8
+              </button>
+              <button class="calc-btn number" onclick="inputNumber('9')">
+                9
+              </button>
               <button class="calc-btn operator" onclick="inputOperator('÷')">
-                <img src="/assets/images/keyboard/Type=Divide.svg" alt="Divide" class="object-fit-cover"></button>
+                <img
+                  src="/assets/images/keyboard/Type=Divide.svg"
+                  alt="Divide"
+                  class="object-fit-cover"
+                />
+              </button>
               <button class="calc-btn function" onclick="clearAll()">AC</button>
 
-              <button class="calc-btn number" onclick="inputNumber('4')">4</button>
-              <button class="calc-btn number" onclick="inputNumber('5')">5</button>
-              <button class="calc-btn number" onclick="inputNumber('6')">6</button>
-              <button class="calc-btn operator" onclick="inputOperator('×')"> <img
-                  src="/assets/images/keyboard/Type=Multiply.svg" alt="Multiply" class="object-fit-cover"></button>
+              <button class="calc-btn number" onclick="inputNumber('4')">
+                4
+              </button>
+              <button class="calc-btn number" onclick="inputNumber('5')">
+                5
+              </button>
+              <button class="calc-btn number" onclick="inputNumber('6')">
+                6
+              </button>
+              <button class="calc-btn operator" onclick="inputOperator('×')">
+                <img
+                  src="/assets/images/keyboard/Type=Multiply.svg"
+                  alt="Multiply"
+                  class="object-fit-cover"
+                />
+              </button>
               <button class="calc-btn function" onclick="backspace()">
-                <img src="/assets/images/keyboard/Type=Backspace.svg" alt="Backspace" class="object-fit-cover">
+                <img
+                  src="/assets/images/keyboard/Type=Backspace.svg"
+                  alt="Backspace"
+                  class="object-fit-cover"
+                />
               </button>
 
-              <button class="calc-btn number" onclick="inputNumber('1')">1</button>
-              <button class="calc-btn number" onclick="inputNumber('2')">2</button>
-              <button class="calc-btn number" onclick="inputNumber('3')">3</button>
+              <button class="calc-btn number" onclick="inputNumber('1')">
+                1
+              </button>
+              <button class="calc-btn number" onclick="inputNumber('2')">
+                2
+              </button>
+              <button class="calc-btn number" onclick="inputNumber('3')">
+                3
+              </button>
               <button class="calc-btn operator" onclick="inputOperator('-')">
-                <img src="/assets/images/keyboard/Type=Minus.svg" alt="Minus" class="object-fit-cover">
+                <img
+                  src="/assets/images/keyboard/Type=Minus.svg"
+                  alt="Minus"
+                  class="object-fit-cover"
+                />
               </button>
               <button class="calc-btn function" onclick="memory()">再記</button>
 
-              <button class="calc-btn number" onclick="inputNumber('00')">00</button>
-              <button class="calc-btn number" onclick="inputNumber('0')">0</button>
-              <button class="calc-btn operator" onclick="inputOperator('.')">.</button>
-              <button class="calc-btn operator" onclick="inputOperator('+')">
-                <img src="/assets/images/keyboard/Type=Plus.svg" alt="Plus" class="object-fit-cover">
+              <button class="calc-btn number" onclick="inputNumber('00')">
+                00
               </button>
-              <button class="calc-btn equals" onclick="calculate()"><img src="/assets/images/keyboard/Type=Check.svg"
-                  alt="Check" class="object-fit-cover"></button>
+              <button class="calc-btn number" onclick="inputNumber('0')">
+                0
+              </button>
+              <button class="calc-btn operator" onclick="inputOperator('.')">
+                .
+              </button>
+              <button class="calc-btn operator" onclick="inputOperator('+')">
+                <img
+                  src="/assets/images/keyboard/Type=Plus.svg"
+                  alt="Plus"
+                  class="object-fit-cover"
+                />
+              </button>
+              <button class="calc-btn equals" onclick="calculate()">
+                <img
+                  src="/assets/images/keyboard/Type=Check.svg"
+                  alt="Check"
+                  class="object-fit-cover"
+                />
+              </button>
               <%- include('./layout/footer'); -%>
             </div>
           </div>
         </div>
-
-
       </main>
-  </div>
+    </div>
 
+    <script type="module" src="../main.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 
+    <!-- 月曆的js -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 這裡再跑一次，確保 icon 轉換完成
+        lucide.createIcons();
 
+        // 取得今天日期
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        const mm = String(today.getMonth() + 1); // 不補0
+        const dd = String(today.getDate()); // 不補0
+        const todayFormatted = `${yyyy}/${mm}/${dd}`;
 
+        // 初始化日期選擇器
+        const fp = flatpickr("#consult_datetime", {
+          dateFormat: "Y/m/d",
+          defaultDate: todayFormatted,
+          allowInput: false,
+        });
 
-  <script type="module" src="../main.js"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-
-
-  <!-- 月曆的js -->
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // 這裡再跑一次，確保 icon 轉換完成
-      lucide.createIcons();
-
-      // 取得今天日期
-      const today = new Date();
-      const yyyy = today.getFullYear();
-      const mm = String(today.getMonth() + 1);  // 不補0
-      const dd = String(today.getDate());       // 不補0
-      const todayFormatted = `${yyyy}/${mm}/${dd}`;
-
-      // 初始化日期選擇器
-      const fp = flatpickr("#consult_datetime", {
-        dateFormat: "Y/m/d",
-        defaultDate: todayFormatted,
-        allowInput: false,
+        // 讓點擊 icon 也能開啟日期選擇器
+        document
+          .getElementById("calendar_icon")
+          .addEventListener("click", () => {
+            fp.open();
+          });
       });
+    </script>
+    <!-- 月曆的js -->
 
-      // 讓點擊 icon 也能開啟日期選擇器
-      document.getElementById("calendar_icon").addEventListener("click", () => {
-        fp.open();
-      });
-    });
-  </script>
-  <!-- 月曆的js -->
+    <!--計算機-->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const amountInput = document.getElementById("amount");
+        const offcanvas = document.getElementById("calculator");
+        const partialView = document.getElementById("partialView");
+        const calculatorFull = document.getElementById("calculatorFull");
+        let isExpanded = false;
 
-  <!--計算機-->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const amountInput = document.getElementById('amount');
-      const offcanvas = document.getElementById('calculator');
-      const partialView = document.getElementById('partialView');
-      const calculatorFull = document.getElementById('calculatorFull');
-      let isExpanded = false;
-
-      let currentInput = '0', operator = '', previousInput = '', shouldResetDisplay = false;
-
-      // 展開計算機
-      function expandCalculator() {
-        offcanvas.classList.add('expanded');
-        partialView.classList.add('hidden');
-        calculatorFull.classList.add('active');
-        offcanvas.style.height = '334px';
-        isExpanded = true;
-      }
-      function collapseCalculator() {
-        offcanvas.classList.remove('expanded');
-        partialView.classList.remove('hidden');
-        calculatorFull.classList.remove('active');
-        offcanvas.style.height = '106px';
-        isExpanded = false;
-      }
-
-      amountInput.addEventListener('click', (e) => { e.stopPropagation(); expandCalculator(); });
-      partialView.addEventListener('click', (e) => { e.stopPropagation(); expandCalculator(); });
-      document.addEventListener('click', (e) => { if (!offcanvas.contains(e.target) && isExpanded) collapseCalculator(); });
-      offcanvas.addEventListener('click', e => e.stopPropagation());
-
-      // --- 計算機功能 ---
-      function updateInput() {
-        amountInput.value = '$' + currentInput; // 自動加 $
-      }
-
-      function inputNumber(num) {
-        let value = currentInput.replace('$', '');
-        if (shouldResetDisplay || value === '0') {
-          currentInput = num;
+        let currentInput = "0",
+          operator = "",
+          previousInput = "",
           shouldResetDisplay = false;
-        } else {
-          currentInput += num;
+
+        // 展開計算機
+        function expandCalculator() {
+          offcanvas.classList.add("expanded");
+          partialView.classList.add("hidden");
+          calculatorFull.classList.add("active");
+          offcanvas.style.height = "334px";
+          isExpanded = true;
         }
-        updateInput();
-      }
-
-      function inputOperator(op) {
-        if (operator && !shouldResetDisplay) calculate();
-        previousInput = currentInput.replace('$', ''); // 儲存純數字
-        operator = op;
-        shouldResetDisplay = true;
-      }
-
-      function calculate() {
-        if (!operator || shouldResetDisplay) return;
-        let prev = parseFloat(previousInput), current = parseFloat(currentInput.replace('$', '')), result = 0;
-        switch (operator) {
-          case '+': result = prev + current; break;
-          case '-': result = prev - current; break;
-          case '×': result = prev * current; break;
-          case '÷': result = prev / current; break;
+        function collapseCalculator() {
+          offcanvas.classList.remove("expanded");
+          partialView.classList.remove("hidden");
+          calculatorFull.classList.remove("active");
+          offcanvas.style.height = "106px";
+          isExpanded = false;
         }
-        currentInput = result.toString();
-        operator = ''; previousInput = ''; shouldResetDisplay = true;
-        updateInput();
-      }
 
-      function clearAll() { currentInput = '0'; operator = ''; previousInput = ''; shouldResetDisplay = false; updateInput(); }
-      function backspace() { currentInput = currentInput.length > 1 ? currentInput.slice(0, -1) : '0'; updateInput(); }
-      function memory() { alert('再記: ' + currentInput); }
+        amountInput.addEventListener("click", (e) => {
+          e.stopPropagation();
+          expandCalculator();
+        });
+        partialView.addEventListener("click", (e) => {
+          e.stopPropagation();
+          expandCalculator();
+        });
+        document.addEventListener("click", (e) => {
+          if (!offcanvas.contains(e.target) && isExpanded) collapseCalculator();
+        });
+        offcanvas.addEventListener("click", (e) => e.stopPropagation());
 
-      window.inputNumber = inputNumber;
-      window.inputOperator = inputOperator;
-      window.calculate = calculate;
-      window.clearAll = clearAll;
-      window.backspace = backspace;
-      window.memory = memory;
+        // --- 計算機功能 ---
+        function updateInput() {
+          amountInput.value = "$" + currentInput; // 自動加 $
+        }
 
-      // 語音/QR/儲存
-      window.voiceFunction = () => alert('語音');
-      window.qrFunction = () => alert('QR');
-      window.saveFunction = () => alert('儲存');
+        function inputNumber(num) {
+          let value = currentInput.replace("$", "");
+          if (shouldResetDisplay || value === "0") {
+            currentInput = num;
+            shouldResetDisplay = false;
+          } else {
+            currentInput += num;
+          }
+          updateInput();
+        }
 
-      updateInput(); // 初始化顯示 $0
-    });
-    const amountInput = document.getElementById('amount');
+        function inputOperator(op) {
+          if (operator && !shouldResetDisplay) calculate();
+          previousInput = currentInput.replace("$", ""); // 儲存純數字
+          operator = op;
+          shouldResetDisplay = true;
+        }
 
-    amountInput.addEventListener('mousedown', (e) => {
-      e.preventDefault();      // 阻止鍵盤彈出
-      expandCalculator();      // 展開計算機
-    });
-  </script>
+        function calculate() {
+          if (!operator || shouldResetDisplay) return;
+          let prev = parseFloat(previousInput),
+            current = parseFloat(currentInput.replace("$", "")),
+            result = 0;
+          switch (operator) {
+            case "+":
+              result = prev + current;
+              break;
+            case "-":
+              result = prev - current;
+              break;
+            case "×":
+              result = prev * current;
+              break;
+            case "÷":
+              result = prev / current;
+              break;
+          }
+          currentInput = result.toString();
+          operator = "";
+          previousInput = "";
+          shouldResetDisplay = true;
+          updateInput();
+        }
 
-</body>
+        function clearAll() {
+          currentInput = "0";
+          operator = "";
+          previousInput = "";
+          shouldResetDisplay = false;
+          updateInput();
+        }
+        function backspace() {
+          currentInput =
+            currentInput.length > 1 ? currentInput.slice(0, -1) : "0";
+          updateInput();
+        }
+        function memory() {
+          alert("再記: " + currentInput);
+        }
 
+        window.inputNumber = inputNumber;
+        window.inputOperator = inputOperator;
+        window.calculate = calculate;
+        window.clearAll = clearAll;
+        window.backspace = backspace;
+        window.memory = memory;
+
+        // 語音/QR/儲存
+        window.voiceFunction = () => alert("語音");
+        window.qrFunction = () => alert("QR");
+        window.saveFunction = () => alert("儲存");
+
+        updateInput(); // 初始化顯示 $0
+      });
+      const amountInput = document.getElementById("amount");
+
+      amountInput.addEventListener("mousedown", (e) => {
+        e.preventDefault(); // 阻止鍵盤彈出
+        expandCalculator(); // 展開計算機
+      });
+    </script>
+  </body>
 </html>
