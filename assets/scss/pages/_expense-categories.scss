@@ -1,0 +1,17 @@
+/* 移除點擊後（active）的背景色 */
+.accordion-button:not(.collapsed) {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    /* 移除陰影 */
+}
+
+/* 移除 focus 後的外框 */
+.accordion-button:focus {
+    box-shadow: none !important;
+}
+
+/* 保持展開時也有分隔線 */
+.accordion-button {
+    border-bottom: 1px solid #dee2e6 !important;
+    /* Bootstrap 預設灰線 */
+}
