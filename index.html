@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,9 +8,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
     />
-    <title>index</title>
-    <script type="module" crossorigin src="/CASHU-m/assets/main-CQ3Vh8oM.js"></script>
-    <link rel="stylesheet" crossorigin href="/CASHU-m/assets/main-DBt_I-t0.css">
+    <title>新增紀錄-CASHU</title>
+    <script type="module" crossorigin src="/CASHU-m/assets/main-BAFKxgQg.js"></script>
+    <link rel="stylesheet" crossorigin href="/CASHU-m/assets/main-CPT711Mf.css">
   </head>
 
   <body>
@@ -122,7 +122,7 @@
                     <input
                       type="text"
                       id="amount"
-                      class="form-control focused"
+                      class="form-control"
                       inputmode="none"
                       placeholder="$0"
                       readonly
@@ -179,7 +179,7 @@
                     id="floatingTextarea2"
                     style="height: 200px; resize: none"
                   ></textarea>
-                  <label for="floatingTextarea2">請輸入備註</label>
+                  <label for="floatingTextarea2 ">請輸入備註</label>
                 </div>
               </section>
             </div>
@@ -344,29 +344,25 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        // 這裡再跑一次，確保 icon 轉換完成
         lucide.createIcons();
 
-        // 取得今天日期
         const today = new Date();
         const yyyy = today.getFullYear();
-        const mm = String(today.getMonth() + 1); // 不補0
-        const dd = String(today.getDate()); // 不補0
+        const mm = String(today.getMonth() + 1);
+        const dd = String(today.getDate());
         const todayFormatted = `${yyyy}/${mm}/${dd}`;
 
-        // 初始化日期選擇器
         const fp = flatpickr("#consult_datetime", {
           dateFormat: "Y/m/d",
           defaultDate: todayFormatted,
           allowInput: false,
         });
 
-        // 讓點擊 icon 也能開啟日期選擇器
-        document
-          .getElementById("calendar_icon")
-          .addEventListener("click", () => {
+        document.querySelectorAll(".calendar_icon").forEach((el) => {
+          el.addEventListener("click", () => {
             fp.open();
           });
+        });
       });
     </script>
     <!-- 月曆的js -->
@@ -379,6 +375,9 @@
         const partialView = document.getElementById("partialView");
         const calculatorFull = document.getElementById("calculatorFull");
         let isExpanded = false;
+
+        // 🚀 確保載入頁面時不會自動 focus
+        amountInput.blur();
 
         let currentInput = "0",
           operator = "",
