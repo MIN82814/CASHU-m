@@ -443,6 +443,11 @@
         e.preventDefault(); // 阻止鍵盤彈出
         expandCalculator(); // 展開計算機
       });
+      amountInput.addEventListener("mousedown", (e) => {
+        e.preventDefault(); // 阻止鍵盤彈出
+        document.activeElement.blur(); // 讓任何正在輸入的 input 失去焦點 → 鍵盤收起
+        expandCalculator(); // 展開計算機
+      });
     </script>
   </body>
 </html>
