@@ -813,7 +813,7 @@ $table-variants: (
 //$input-btn-padding-y: .375rem !default;
 //$input-btn-padding-x: .75rem !default;
 $input-btn-padding-y: .75rem !default;
-$input-btn-padding-x: .75rem !default;
+$input-btn-padding-x: 1rem !default;
 $input-btn-font-family: null !default;
 $input-btn-font-size: $font-size-base !default;
 $input-btn-line-height: $line-height-base !default;
@@ -944,7 +944,9 @@ $input-border-radius-sm: var(--#{$prefix}border-radius-sm) !default;
 $input-border-radius-lg: var(--#{$prefix}border-radius-lg) !default;
 
 $input-focus-bg: $input-bg !default;
-$input-focus-border-color: tint-color($component-active-bg, 50%) !default;
+//$input-focus-border-color: tint-color($component-active-bg, 50%) !default;min-v
+$input-focus-border-color:#EF6400;
+$input-focus-color: $input-color !default;
 $input-focus-color: $input-color !default;
 $input-focus-width: $input-btn-focus-width !default;
 $input-focus-box-shadow: $input-btn-focus-box-shadow !default;
@@ -1059,6 +1061,7 @@ $form-select-box-shadow: var(--#{$prefix}box-shadow-inset) !default;
 $form-select-focus-border-color: $input-focus-border-color !default;
 $form-select-focus-width: $input-focus-width !default;
 $form-select-focus-box-shadow: 0 0 0 $form-select-focus-width $input-btn-focus-color !default;
+
 
 $form-select-padding-y-sm: $input-padding-y-sm !default;
 $form-select-padding-x-sm: $input-padding-x-sm !default;
