@@ -1,12 +1,13 @@
-/* input / textarea / select focus 樣式，包含模擬 focus */
-input:focus,
-textarea:focus,
-.input-select:focus,
+input.input-select:focus,
+textarea.input-select:focus,
 input.focused,
-textarea.focused,
-.select.focused {
-  border-color: #EF6400;               // 或 $input-focus-border-color
-  box-shadow: 0 0 1.3px 1px #FFC56D;   // 或 $input-btn-focus-color
+textarea.focused {
+  border-color: #EF6400;
+  box-shadow: 0 0 1.3px 1px #FFC56D;
+}
+textarea.form-control:focus {
+  border-color: #EF6400;
+  box-shadow: 0 0 1.3px 1px #FFC56D;
 }
 .rounded-12{
     border-radius: 12px;
