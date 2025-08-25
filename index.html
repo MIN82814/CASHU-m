@@ -9,12 +9,12 @@
       href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
     />
     <title>index</title>
-    <script type="module" crossorigin src="/CASHU-m/assets/main-C1R7c46E.js"></script>
-    <link rel="stylesheet" crossorigin href="/CASHU-m/assets/main-gvNUpk93.css">
+    <script type="module" crossorigin src="/CASHU-m/assets/main-CQ3Vh8oM.js"></script>
+    <link rel="stylesheet" crossorigin href="/CASHU-m/assets/main-DBt_I-t0.css">
   </head>
 
   <body>
-    <div class="container-fluid mobile-frame bg-white vh-100">
+    <div class="container-fluid mobile-frame bg-white">
       <img src="/CASHU-m/assets/Status%20bar-C_-zPuPq.svg" alt="statusbar" class="object-fit-cover">      <main>
         <div class="py-4 d-flex justify-content-between align-items-center">
           <i data-lucide="chevron-left" class="icon-24"></i>
@@ -105,26 +105,79 @@
               </section>
               <!--input-->
               <section>
-                <ul class="row custom-gap gy-4">
-                  <li class="col-6">
+                <ul class="row custom-gap mb-4">
+                  <li class="col-6 pe-4 mb-7">
                     <input
                       type="text"
                       id="name"
-                      class="form-control"
+                      class="form-control input-select"
                       placeholder="名稱"
+                      style="height: 44px"
                     />
                   </li>
-                  <li class="col-6">
+                  <li class="col-6 mb-7">
                     <input
                       type="text"
                       id="amount"
-                      class="form-control"
+                      class="form-control focused"
                       inputmode="none"
                       placeholder="$0"
                       readonly
+                      style="height: 44px"
                     />
                   </li>
+                  <li class="col-6 pe-4">
+                    <div class="position-relative">
+                      <button
+                        type="button"
+                        class="btn btn-outline-primary input-select w-100 text-start rounded-12 d-flex align-items-center"
+                        id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        style="height: 44px"
+                      >
+                        現金
+                        <span
+                          id="calendar_icon"
+                          class="position-absolute top-50 end-0 translate-middle-y me-5"
+                          style="cursor: pointer"
+                        >
+                          <i data-lucide="chevron-right"></i>
+                        </span>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="col-6">
+                    <div class="position-relative">
+                      <button
+                        type="button"
+                        class="btn btn-outline-primary input-select w-100 text-start rounded-12 d-flex align-items-center"
+                        id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        style="height: 44px"
+                      >
+                        生活開銷
+                        <span
+                          id="calendar_icon"
+                          class="position-absolute top-50 end-0 translate-middle-y me-5"
+                          style="cursor: pointer"
+                        >
+                          <i data-lucide="chevron-right"></i>
+                        </span>
+                      </button>
+                    </div>
+                  </li>
                 </ul>
+                <div class="form-floating" style="margin-bottom: 106px">
+                  <textarea
+                    class="form-control rounded-12 py-4"
+                    placeholder="Leave a comment here"
+                    id="floatingTextarea2"
+                    style="height: 200px"
+                  ></textarea>
+                  <label for="floatingTextarea2">請輸入備註</label>
+                </div>
               </section>
             </div>
 
@@ -336,26 +389,43 @@
           calculatorFull.classList.add("active");
           offcanvas.style.height = "334px";
           isExpanded = true;
+
+          // 添加 focused 樣式
+          amountInput.classList.add("focused");
         }
+
         function collapseCalculator() {
           offcanvas.classList.remove("expanded");
           partialView.classList.remove("hidden");
           calculatorFull.classList.remove("active");
           offcanvas.style.height = "106px";
           isExpanded = false;
+
+          // 移除 focused 樣式
+          amountInput.classList.remove("focused");
         }
 
+        // 事件監聽器
         amountInput.addEventListener("click", (e) => {
           e.stopPropagation();
           expandCalculator();
         });
+
+        amountInput.addEventListener("mousedown", (e) => {
+          e.preventDefault(); // 阻止鍵盤彈出
+          document.activeElement.blur(); // 讓任何正在輸入的 input 失去焦點
+          expandCalculator(); // 展開計算機
+        });
+
         partialView.addEventListener("click", (e) => {
           e.stopPropagation();
           expandCalculator();
         });
+
         document.addEventListener("click", (e) => {
           if (!offcanvas.contains(e.target) && isExpanded) collapseCalculator();
         });
+
         offcanvas.addEventListener("click", (e) => e.stopPropagation());
 
         // --- 計算機功能 ---
@@ -414,15 +484,18 @@
           shouldResetDisplay = false;
           updateInput();
         }
+
         function backspace() {
           currentInput =
             currentInput.length > 1 ? currentInput.slice(0, -1) : "0";
           updateInput();
         }
+
         function memory() {
           alert("再記: " + currentInput);
         }
 
+        // 將函數暴露到全域作用域
         window.inputNumber = inputNumber;
         window.inputOperator = inputOperator;
         window.calculate = calculate;
@@ -436,17 +509,6 @@
         window.saveFunction = () => alert("儲存");
 
         updateInput(); // 初始化顯示 $0
-      });
-      const amountInput = document.getElementById("amount");
-
-      amountInput.addEventListener("mousedown", (e) => {
-        e.preventDefault(); // 阻止鍵盤彈出
-        expandCalculator(); // 展開計算機
-      });
-      amountInput.addEventListener("mousedown", (e) => {
-        e.preventDefault(); // 阻止鍵盤彈出
-        document.activeElement.blur(); // 讓任何正在輸入的 input 失去焦點 → 鍵盤收起
-        expandCalculator(); // 展開計算機
       });
     </script>
   </body>
