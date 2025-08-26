@@ -16,7 +16,7 @@
         <main>
           <div class="py-4 d-flex justify-content-between align-items-center">
             <i data-lucide="chevron-left" class="icon-40 p-3"></i>
-            <span class="header-2 fw-bold">新增紀錄</span>
+            <span class="header-2 fw-bold line-height-sm">新增紀錄</span>
             <i data-lucide="chevron-right" class="icon-40 p-3 icon-transparent"></i>
           </div>
           <div class="position-relative">
@@ -31,16 +31,16 @@
           <div class="addrecord">
             <ul class="nav nav-underline border-bottom text-center" id="account-tab" role="tablist">
               <li class="nav-item tab-three">
-                <a class="nav-link active" id="expenseAmount-tab" data-bs-toggle="tab" href="#expenseAmount" role="tab"
-                  aria-controls="expenseAmount" aria-selected="true">支出</a>
+                <a class="nav-link active line-height-sm" id="expenseAmount-tab" data-bs-toggle="tab"
+                  href="#expenseAmount" role="tab" aria-controls="expenseAmount" aria-selected="true">支出</a>
               </li>
               <li class="nav-item tab-three">
-                <a class="nav-link" id="passengers-tab" data-bs-toggle="tab" href="#passengers" role="tab"
-                  aria-controls="passengers" aria-selected="false">收入</a>
+                <a class="nav-link line-height-sm" id="passengers-tab" data-bs-toggle="tab" href="#passengers"
+                  role="tab" aria-controls="passengers" aria-selected="false">收入</a>
               </li>
               <li class="nav-item tab-three">
-                <a class="nav-link" id="passengers-tab" data-bs-toggle="tab" href="#passengers" role="tab"
-                  aria-controls="passengers" aria-selected="false">轉帳</a>
+                <a class="nav-link line-height-sm" id="passengers-tab" data-bs-toggle="tab" href="#passengers"
+                  role="tab" aria-controls="passengers" aria-selected="false">轉帳</a>
               </li>
             </ul>
 
@@ -48,9 +48,9 @@
               <div class="tab-pane fade show active" id="expenseAmount" role="tabpanel"
                 aria-labelledby="expenseAmount-tab" tabindex="0">
                 <section class="py-5 d-flex align-items-center flex-column">
-                  <div class="categoy-icon category-icon-xl mb-4">
+                  <a href="category-page.html" class="categoy-icon category-icon-xl mb-4">
                     <img src="/assets/images/Category/icon-category-food-breakfast-48.svg" alt="早餐icon" class="" />
-                  </div>
+                  </a>
                   <p>早餐 <i data-lucide="pencil" class="icon-15 ms-2"></i></p>
                 </section>
                 <!--input-->
@@ -134,10 +134,10 @@
             <!-- 完全展開 -->
             <div class="calculator-full" id="calculatorFull">
               <div class="calculator-header gap-4 mb-4">
-                <button type="button" class="btn btn-outline-primary rounded-pill">
+                <button type="button" class="btn btn-outline-primary rounded-pill fw-bold">
                   語音記帳
                 </button>
-                <button type="button" class="btn btn-outline-primary rounded-pill">
+                <button type="button" class="btn btn-outline-primary rounded-pill fw-bold">
                   發票記帳
                 </button>
               </div>

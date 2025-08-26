@@ -933,6 +933,7 @@ $input-btn-line-height: $line-height-base !default;
 $input-btn-focus-width: $focus-ring-width !default;
 $input-btn-focus-color-opacity: $focus-ring-opacity !default;
 $input-btn-focus-color: $focus-ring-color !default;
+
 $input-btn-focus-blur: $focus-ring-blur !default;
 $input-btn-focus-box-shadow: $focus-ring-box-shadow !default;
 
@@ -989,7 +990,8 @@ $btn-link-focus-shadow-rgb: to-rgb(mix(color-contrast($link-color), $link-color,
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius: var(--#{$prefix}border-radius) !default;
-$btn-border-radius-sm: var(--#{$prefix}border-radius-sm);
+$btn-border-radius-sm: var(--#{$prefix}border-radius-sm
+);
 $btn-border-radius-lg: var(--#{$prefix}border-radius-lg);
 
 $btn-transition: color .15s ease-in-out,
