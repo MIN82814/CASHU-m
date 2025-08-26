@@ -35,15 +35,7 @@
 }
 
 
-.partial-btn {
-  background: #ff6b35;
-  color: white;
-  padding: 15px 40px;
-  border-radius: 25px;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-}
+
 
 .save-btn {
   background: #ff6b35;
@@ -116,23 +108,18 @@
 }
 
 .calc-btn.number {
-  background: #FFDEA5;
-  color: #1A1A1A;
+  background: $primary-200;
+
 }
 
-.calc-btn.operator {
-  background: #FFC56D;
-  color: #1A1A1A;
-}
-
+.calc-btn.operator,
 .calc-btn.function {
-  background: #FFC56D;
-  color: #1A1A1A;
-  font-size: 16px;
+  background: $primary-300;
+
 }
 
 .calc-btn.equals {
-  background: #EF6400;
+  background: $primary-600;
   color: white;
 }
 
