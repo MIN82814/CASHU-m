@@ -4,7 +4,8 @@
 @import './base/base';
 @import './utils/icon';
 @import './utils/utilities';
-
+@import './utils/custom';
+@import "bootstrap/scss/utilities/api"; 
 
 @import './components/tab';
 @import './components/calculator';

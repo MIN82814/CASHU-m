@@ -14,3 +14,11 @@ textarea.form-control:focus {
 .rounded-12 {
   border-radius: 12px;
 }
+
+.border-dashed-neutral {
+  border: 1px dashed $neutral-300;
+}
+
+.w-44{
+  width: 44px;
+}
