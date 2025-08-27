@@ -105,6 +105,7 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  color: $neutral-950;
 }
 
 .calc-btn.number {
@@ -128,6 +129,7 @@
 .calc-btn.operator:hover,
 .calc-btn.function:hover {
   background: $primary-400;
+
 }
 
 .calc-btn.equals {
@@ -138,6 +140,7 @@
 
 .calc-btn.equals:hover {
   background: $primary-700;
+
 }
 
 /* 部分視圖隱藏 */
