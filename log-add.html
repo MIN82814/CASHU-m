@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
   <title>新增紀錄-CASHU</title>
-  <script type="module" crossorigin src="/CASHU-m/assets/main-DuRBXArK.js"></script>
-  <link rel="stylesheet" crossorigin href="/CASHU-m/assets/main-Cy6V-uEj.css">
+  <script type="module" crossorigin src="/CASHU-m/assets/main-DGTs7NwZ.js"></script>
+  <link rel="stylesheet" crossorigin href="/CASHU-m/assets/main-BWzqYhSf.css">
 </head>
 
 <body>
@@ -58,18 +58,17 @@
                 <section>
                   <ul class="row mb-4">
                     <li class="col-6">
-                      <input type="text" id="name" class="form-control input-select " placeholder="名稱"
-                        style="height: 44px" />
+                      <input type="text" id="name" class="form-control input-select h-44" placeholder="名稱" />
                     </li>
                     <li class="col-6">
-                      <input type="text" id="amount" class="form-control " inputmode="none" placeholder="$0" readonly
-                        style="height: 44px" />
+                      <input type="text" id="amount" class="form-control h-44" inputmode="none" placeholder="$0"
+                        readonly />
                     </li>
                     <li class="col-6">
                       <div class="position-relative">
                         <button type="button"
-                          class="btn btn-outline-neutral-300 text-neutral-900 input-select w-100 text-start rounded-m d-flex align-items-center"
-                          id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="height: 44px">
+                          class="btn btn-outline-neutral-300 text-neutral-900 input-select w-100 text-start rounded-m d-flex align-items-center h-44"
+                          id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                           現金
                           <span id="calendar_icon" class="position-absolute top-50 end-0 translate-middle-y me-5"
                             style="cursor: pointer">
@@ -81,8 +80,8 @@
                     <li class="col-6">
                       <div class="position-relative">
                         <button type="button"
-                          class="btn btn-outline-neutral-300 text-neutral-900 input-select w-100 text-start rounded-m d-flex align-items-center"
-                          id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="height: 44px">
+                          class="btn btn-outline-neutral-300 text-neutral-900 input-select w-100 text-start rounded-m d-flex align-items-center h-44"
+                          id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                           生活開銷
                           <span id="calendar_icon" class="position-absolute top-50 end-0 translate-middle-y me-5"
                             style="cursor: pointer">
@@ -114,18 +113,18 @@
               <div class="expand-handle"></div>
               <div class="d-flex gap-4 align-items-center">
                 <button type="button"
-                  class="btn btn-outline-primary rounded-pill flex-grow-1 d-flex align-items-center justify-content-center"
-                  onclick="event.stopPropagation(); voiceFunction()" style="height: 44px">
+                  class="btn btn-outline-primary rounded-pill flex-grow-1 d-flex align-items-center justify-content-center h-44"
+                  onclick="event.stopPropagation(); voiceFunction()">
                   <i data-lucide="mic"></i>
                 </button>
                 <button type="button"
-                  class="btn btn-outline-primary rounded-pill flex-grow-1 d-flex align-items-center justify-content-center"
-                  onclick="event.stopPropagation(); qrFunction()" style="height: 44px">
+                  class="btn btn-outline-primary rounded-pill flex-grow-1 d-flex align-items-center justify-content-center h-44"
+                  onclick="event.stopPropagation(); qrFunction()">
                   <i data-lucide="qr-code" class="align-middle"></i>
                 </button>
                 <button type="button"
-                  class="btn btn-primary rounded-pill d-flex align-items-center justify-content-center"
-                  style="width: 165.5px; height: 44px" onclick="event.stopPropagation(); saveFunction()">
+                  class="btn btn-primary rounded-pill d-flex align-items-center justify-content-center h-44"
+                  style="width: 165.5px;" onclick="event.stopPropagation(); saveFunction()">
                   儲存
                 </button>
               </div>
@@ -205,7 +204,8 @@
                   <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M5%2012H19M12%205V19'%20stroke='%231A1A1A'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Plus" class="object-fit-cover" />
                 </button>
                 <button class="calc-btn equals" onclick="calculate()">
-                  <i data-lucide="check"></i>
+                  <a href="log-add.html">
+                    <i data-lucide="check"></i></a>
                 </button>
                 <img src="data:image/svg+xml,%3csvg%20width='343'%20height='34'%20viewBox='0%200%20343%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='144'%20height='5'%20rx='2.5'%20transform='matrix(-1%200%200%201%20244%2021)'%20fill='black'/%3e%3c/svg%3e" alt="statusbar"
     class="object-fit-cover position-absolute  bottom-0 start-50 translate-middle-x $zindex-fixed:2000;">              </div>
@@ -378,7 +378,9 @@
 
       window.voiceFunction = () => alert("語音");
       window.qrFunction = () => alert("QR");
-      window.saveFunction = () => alert("儲存");
+      window.saveFunction = () => {
+        window.location.href = "add-result.html";
+      };
 
       updateInput(); // 初始化 $0
 
