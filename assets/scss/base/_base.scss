@@ -1,9 +1,7 @@
 body {
     background-color: $neutral-900;
     color: $neutral-950;
-    line-height: 1.5;
 }
-
 
 img {
     max-width: 100%;
@@ -23,8 +21,8 @@ p {
 
 ul {
     list-style: none;
-    padding-left: 0;
-}
+ 	margin: 0;
+	padding: 0;}
 
 button,
 input,
@@ -39,4 +37,14 @@ button:focus,
 button:active {
     outline: none;
     box-shadow: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    /* 移除上下間距 */
 }

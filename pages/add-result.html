@@ -20,15 +20,15 @@
       <div class="container-fluid">
         <main
           class="d-flex flex-column justify-content-between"
-          style="min-height: 100vh; padding-bottom: 98px"
+          style="min-height: 100vh; padding-bottom: 98px; padding-top: 50px"
         >
           <div>
             <div class="py-4 d-flex justify-content-center align-items-center">
               <h2 class="h2 fw-bold">紀錄</h2>
             </div>
             <p class="text-neutral-500 body-2 py-3">2025/07/03</p>
-            <ul class="mt-2">
-              <li class="mb-3 add-result-item">
+            <ul class="mt-2 mb-0">
+              <li class="mb-3 add-item">
                 <a href="#" class="d-block py-3 px-5 active">
                   <div class="d-flex align-items-center">
                     <sapn
@@ -56,7 +56,7 @@
                   </div>
                 </a>
               </li>
-              <li class="mb-3 add-result-item">
+              <li class="mb-3 add-item">
                 <a href="#" class="d-block py-3 px-5">
                   <div class="d-flex align-items-center">
                     <sapn
@@ -84,7 +84,7 @@
                   </div>
                 </a>
               </li>
-              <li class="mb-3 add-result-item">
+              <li class="add-item">
                 <a href="#" class="d-block py-3 px-5">
                   <div class="d-flex align-items-center">
                     <sapn
@@ -171,12 +171,12 @@
       });
     </script>
     <script>
-      document.querySelectorAll(".add-result-item a").forEach((link) => {
+      document.querySelectorAll(".add-item a").forEach((link) => {
         link.addEventListener("click", (e) => {
           e.preventDefault(); // 防止跳頁
           // 移除其他 active
           document
-            .querySelectorAll(".add-result-item a")
+            .querySelectorAll(".add-item a")
             .forEach((i) => i.classList.remove("active"));
           // 加上 active
           link.classList.add("active");

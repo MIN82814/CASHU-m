@@ -5,17 +5,18 @@
 @import './utils/custom';
 @import './base/base';
 @import './utils/icon';
+@import "./components/buttons";
 
 @import "bootstrap/scss/utilities/api";
 
-@import './components/tab';
-@import './components/calculator';
-@import './components/category-icon';
-@import './components/buttons';
+@import "./components/tab";
+@import "./components/calculator";
+@import "./components/category-icon";
+@import "./components/add-item";
+@import "./components/progress";
+@import "./components/offcanvas";
 @import './layout/header';
 @import './layout/footer';
 @import './layout/mobile-frame';
 
-@import './pages/index';
 @import './pages/category-page';
-@import './components/add-item.scss';

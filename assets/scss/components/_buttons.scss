@@ -30,6 +30,7 @@
   --bs-btn-border-color: #EF6400; // 邊框顏色
   --bs-btn-hover-bg: #ffffff; // hover 背景色
   --bs-btn-hover-border-color: #CC4C02;
+  --bs-btn-disabled-border-color: #EF640060;
 }
 
 .btn-secondary {
@@ -48,4 +49,26 @@
   --bs-btn-active-border-color: transparent; // 邊框設為透明 
   --bs-btn-disabled-border-color: transparent; //邊框設為透明 
 
+}
+
+/*.btn-outline-neutral-300*/
+.btn-outline-neutral-300 {
+  color: #1A1A1A;
+  border-color: #B0B0B0;
+}
+
+.btn-outline-neutral-300:hover {
+  color: #1A1A1A;
+  background-color: #B0B0B0;
+  border-color: #B0B0B0;
+}
+
+.btn-outline-neutral-300:active {
+  color: #B0B0B0;
+  background-color: #ffffff;
+}
+
+.btn-outline-neutral-300:disabled {
+  color: #454545;
+  border-color: #454545;
 }

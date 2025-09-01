@@ -1,0 +1,15 @@
+.add-item {
+    margin: 0 -16px;
+
+
+}
+
+.add-item:not(.active):hover,
+.add-item:not(.active):focus {
+    background-color: $primary-50;
+    /* hover 時的底色 */
+}
+
+.add-item .active {
+    background-color: $primary-50;
+}

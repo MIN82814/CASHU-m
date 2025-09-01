@@ -635,14 +635,13 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns: 12 !default;
-//$grid-gutter-width: 1.5rem !default;
 $grid-gutter-width: 0.75rem !default;
 $grid-row-columns: 6 !default;
 
 // Container padding
 
 $container-padding-x: 32px;
-
+//$container-padding-x: $grid-gutter-width !default;
 
 // Components
 //
@@ -772,12 +771,18 @@ $line-height-base: 1.5 !default;
 $line-height-sm: 1.2 !default;
 $line-height-lg: 2 !default;
 
-$h1-font-size: $font-size-base * 2.5 !default;
-$h2-font-size: $font-size-base * 2 !default;
-$h3-font-size: $font-size-base * 1.5 !default;
-$h4-font-size: $font-size-base * 1.25 !default;
-$h5-font-size: $font-size-base !default;
-$h6-font-size: $font-size-base * 0.875 !default;
+// $h1-font-size: $font-size-base * 2.5 !default;
+$h1-font-size: $font-size-base * 1.5 ; //24px
+// $h2-font-size: $font-size-base * 2 !default;
+$h2-font-size: $font-size-base * 1.25; //20px
+// $h3-font-size: $font-size-base * 1.5 !default;
+$h3-font-size: $font-size-base * 1.125; //18px
+// $h4-font-size: $font-size-base * 1.25 !default;
+$h4-font-size: $font-size-base * 1; //16px
+// $h5-font-size: $font-size-base !default;
+$h5-font-size: $font-size-base * 0.875; //14px
+// $h6-font-size: $font-size-base * 0.875 !default;
+$h6-font-size: $font-size-base * 0.75 ; //12px
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -802,16 +807,18 @@ $headings-color: inherit !default;
 
 // scss-docs-start display-headings
 $display-font-sizes: (
-  1: 5rem,
-  2: 4.5rem,
-  3: 4rem,
-  4: 3.5rem,
-  5: 3rem,
-  6: 2.5rem) !default;
+  1: 2.5rem,//40px
+  2: 2rem,//32px
+  3: 1.5rem,//24px
+  4: 1.125rem,//18px
+  5: 1rem,//16px
+  6: 0.875rem //14px
+  ) !default;
 
 $display-font-family: null !default;
 $display-font-style: null !default;
-$display-font-weight: 300 !default;
+// $display-font-weight: 300 !default;
+$display-font-weight: 700;
 $display-line-height: $headings-line-height !default;
 // scss-docs-end display-headings
 
@@ -1055,7 +1062,7 @@ $input-disabled-bg: var(--#{$prefix}secondary-bg) !default;
 $input-disabled-border-color: null !default;
 
 $input-color: var(--#{$prefix}body-color) !default;
-//$input-border-color: var(--#{$prefix}border-color) !default;//min-v
+//$input-border-color: var(--#{$prefix}border-color) !default;
 $input-border-color: $neutral-300;
 $input-border-width: $input-btn-border-width !default;
 $input-box-shadow: var(--#{$prefix}box-shadow-inset) !default;
